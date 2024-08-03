@@ -20,17 +20,30 @@
         <div
             class="relative flex flex-col min-h-screen overflow-hidden font-semibold text-gray-600 bg-gray-100 dark:bg-gray-900 dark:text-gray-400"
         >
-            <header class="flex items-center justify-between top-nav">
-                <div class="">Home</div>
-                <div class="right-nav">
-                    @if (Route::has('login'))
-                    <livewire:welcome.navigation />
-                    @endif
+            <header class="top-nav bg-sky-950">
+                <div
+                    class="container flex items-center justify-between py-6 mx-auto"
+                >
+                    <div class="flex gap-4">
+                        <a href="/" wire:navigate> Home </a>
+                        <a href="/search-ticket" wire:navigate>
+                            Search Ticket
+                        </a>
+                    </div>
+                    <div class="right-nav">
+                        @if (Route::has('login'))
+                        <livewire:welcome.navigation />
+                        @endif
+                    </div>
                 </div>
             </header>
-            <section class="">Content</section>
-            <footer class="mt-auto">
-                <div class="">Footer</div>
+            <section class="flex justify-between">
+                <div class="container mx-auto">Workspaces</div>
+            </section>
+            <footer class="mt-auto bg-sky-950">
+                <div class="flex items-center justify-center py-4">
+                    <div class="">Footer</div>
+                </div>
             </footer>
             <div
                 class="fixed flex flex-col items-center justify-center w-12 h-12 transition-all duration-300 rounded-full shadow-md right-10 bottom-5 bg-primary hover:cursor-pointer dark:bg-slate-800"
@@ -41,7 +54,7 @@
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
                     stroke="currentColor"
-                    class="h-8"
+                    class="h-8 text-sky-700"
                 >
                     <path
                         stroke-linecap="round"
